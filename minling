@@ -1,0 +1,5 @@
+/opt/riscv/bin/riscv64-unknown-linux-gnu-gcc-ar -r libminic.a lib.o
+/opt/riscv/bin/riscv64-unknown-linux-gnu-gcc a.s -static -lminic -L.
+/opt/riscv-qemu/bin/qemu-riscv64 a.out
+
+

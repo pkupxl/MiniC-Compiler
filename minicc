@@ -1,0 +1,18 @@
+lex minic.l 
+yacc -d minic.y 2> erroinfo.txt
+cc lex.yy.c y.tab.c -ll
+./a.out $1 > eeyore.txt
+lex eeyore.l
+yacc -d eeyore.y 2> erroinfo.txt
+g++ lex.yy.c y.tab.c 2>erroinfo.txt
+./a.out eeyore.txt > a.t
+lex riscv.l
+yacc -d riscv.y
+g++ lex.yy.c y.tab.c
+./a.out a.t > a.s
+
+
+
+
+
+
